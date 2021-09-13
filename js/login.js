@@ -1,28 +1,36 @@
-let btnViewPassword = document.getElementById('btn-view-password');
+let btnViewOrHidePassword = document.getElementById('btn-view-password');
 let inputPassword = document.getElementById('input-password');
 let inputUser = document.getElementById('input-user');
-let errorContainer = document.getElementById('form-message')
+let errorContainer = document.getElementById('form-message-error');
+let btnSubmit = document.getElementById('btn-submit');
 
 
 //Ver u ocultar contraseña
-btnViewPassword.addEventListener('click', () => {
+btnViewOrHidePassword.addEventListener('click', () => {
     if(inputPassword.attributes[2].value === 'password') {
         inputPassword.setAttribute('type', 'text');
-        btnViewPassword.style.backgroundImage = 'url("../images/close-eye.png")';
+        btnViewOrHidePassword.style.backgroundImage = 'url("../images/close-eye.png")';
     } else if(inputPassword.attributes[2].value === 'text') {
         inputPassword.setAttribute('type', 'password');
-        btnViewPassword.style.backgroundImage = 'url("../images/eye.png")';
+        btnViewOrHidePassword.style.backgroundImage = 'url("../images/eye.png")';
     }
 })
 
-//Validación administrador
+//VALIDACION INICION SESIÓN
+
+//El evento de enter solo debe funcionar cuando el formulario este lleno
+
+//Dependiendo del backend que se realice cambiar el tipo de boton y hacer la
+//lógica pertinente para que el formulario y los eventos funcionen bien.
+
+//Reevaluar botón cancelar
 
 inputUser.addEventListener('keypress', (e) => {
     if(e.keyCode === 13) {
         if(inputUser.value != '' && inputPassword.value != ''){
-            validateAdmin()
+            validateAdmin();
         } else {
-            inputPassword.focus()
+            inputPassword.focus();
         }
     }
 })
@@ -30,18 +38,18 @@ inputUser.addEventListener('keypress', (e) => {
 inputPassword.addEventListener('keypress', (e) => {
     if(e.keyCode === 13) {
         if(inputUser.value != '' && inputPassword.value != ''){
-            validateAdmin()
+            validateAdmin();
         } else {
-            inputUser.focus()
+            inputUser.focus();
         }
     }
 })
 
-btnViewPassword.addEventListener('click', () => validateAdmin())
+btnSubmit.addEventListener('click', () => validateAdmin())
 
 const validateAdmin = () => {
     if (inputUser.value === 'admininicial' && inputPassword.value === '123456') {
-        window.location.href = '../views/app.html'
+        window.location.href = '../views/app.html';
     } else {
         errorContainer.style.display = 'block';
     }

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Aplicación principal de administrador.">
+    <title>App tienda WWW</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://use.fontawesome.com">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css">
+    <link rel="shortcut icon" href="../images/shop-icon.png" type="image/x-icon">
+    <link rel="stylesheet" href="../css/admin-style.css" >
+    <link rel="stylesheet" href="../css/general.css">
+    <link rel="stylesheet" href="../css/admin-media.css" media="(min-width: 500px)">
+</head>
+<body>
+    <header>
+        <nav class="navbar-admin">
+            <div class="navbar__container-logo">
+                <a class="link-index container-icon" href="../index.html">
+                    <div class="logo">
+                    </div>
+                </a>
+            </div>
+            <div class="navbar__menu">
+                <div class="menu__container-profile container-icon">
+                    <i class="fas fa-user-circle"></i>
+                </div>
+                <div class="menu__container-settings container-icon">
+                    <i class="fas fa-cog settings-icon"></i>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="btn-group-section">
+            <button class="btn-admin" type="button"><img src="../images/user.svg" alt=""></button>
+            <button class="btn-admin" type="button"><img src="../images/customer.svg" alt="" srcset=""></button>
+            <button class="btn-admin" type="button"><img src="../images/supplier.svg" alt="" srcset=""></button>
+            <button class="btn-admin" type="button"><img src="../images/product.svg" alt="" srcset=""></button>
+            <button class="btn-admin" type="button"><img src="../images/sale.svg" alt="" srcset=""></button>
+            <button class="btn-admin" type="button"><img src="../images/report.svg" alt="" srcset=""></button>
+        </section>
+        <section class="message-section">
+
+        </section>
+        <section class="input-group-section">
+            <label class="input-container-admin input-container-general">
+                <input class="input-general" id="input-cedula" type="text" title="" required>
+                <span class="input-span-general" id="">Cédula</span>
+            </label>
+            <label class="input-container-admin input-container-general">
+                <input class="input-general" id="input-name" type="text" title="" required>
+                <span class="input-span-general" id="">Nombre completo</span>
+            </label>
+            <label class="input-container-admin input-container-general">
+                <input class="input-general" id="input-email" type="text" title="" required>
+                <span class="input-span-general" id="">Correo Electronico</span>
+            </label>
+            <label class="input-container-admin input-container-general">
+                <input class="input-general" id="input-nickname" type="text" title="" required>
+                <span class="input-span-general" id="">Usuario</span>
+            </label>
+            <label class="input-container-admin input-container-general">
+                <input class="input-general" id="input-password" type="text" title="" required>
+                <span class="input-span-general" id="">Contraseña</span>
+            </label>
+        </section>
+        <section class="crud-section">
+            <button class="btn-admin-crud" type="button"><img src="../images/search.svg" alt="" srcset=""></button>
+            <button class="btn-admin-crud" type="button"><img src="../images/update.svg" alt="" srcset=""></button>
+            <button class="btn-admin-crud" type="submit"><img src="../images/plus.svg" alt="" srcset=""></button>
+            <button class="btn-admin-crud" type="button"><img src="../images/delete.svg" alt="" srcset=""></button>
+        </section>
+    </main>
+</body>
+</html>

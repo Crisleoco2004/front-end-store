@@ -5,7 +5,7 @@
 }
 
 html {
-    font-size: 62.5%;
+    font-size: 10px;
     font-family: 'Roboto', sans-serif;
 }
 
@@ -13,7 +13,7 @@ body {
     display: flex;
     width: 100%;
     height: 100vh;
-    background-color: #e3e3e3;
+    background-color: rgba(227, 227, 227, .5);
 }
 
 main {
@@ -25,7 +25,7 @@ main {
     max-height: 500px;
     max-width: 450px;
     margin: auto;
-    padding: 60px;
+    padding: 30px;
     font-size: 1.5rem;
     text-align: left;
 }
@@ -45,7 +45,7 @@ main {
     gap: 10px;
 }
 
-.form-message {
+.form-message-error {
     display: none;
     padding: 10px 20px;
     background-color: rgb(231, 82, 82, 0.8);
@@ -54,38 +54,14 @@ main {
     border-radius: 10px;
 }
 
-.input-container-index {
+.input-container-login {
     width: 100%;
     display: flex;
     flex-direction: column;
 }
 
-.input-index {
-    height: 50px;
-    width: 100%;
-    border-radius: 10px;
-    outline: none;
-    border: none;
-    padding-left: 15px;
-    padding-top: 10px;
-    font-size: 1.5rem;
-}
-
-.input-user-container-index {
-    position: relative;
-}
-
 .input-password-container-index {
     margin-bottom: 10px;
-    position: relative;
-}
-
-.input-span-index {
-    position: absolute;
-    transition: all .5s;
-    left: 10px;
-    top: 2px;
-    font-size: 1.2rem;
 }
 
 .btn-view-password {
@@ -121,6 +97,7 @@ button:hover {
     border: none;
     font-weight: bold;
     color: white;
+    will-change: opacity;
     transition: opacity 500ms;
     font-family: 'Segoe UI', Verdana, sans-serif;
 }
@@ -135,6 +112,12 @@ button:hover {
     opacity: 0.7;
 }
 
-.btn-index:hover{
+.btn-index:active {
     opacity: 1;
+}
+
+@media(min-width:400px) {
+    main {
+        padding: 60px;
+    }
 }
