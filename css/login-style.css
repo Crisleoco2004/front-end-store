@@ -131,7 +131,7 @@ main {
 }
 
 .main-title {
-    color: white;
+    color: var(--text);
 }
 
 .main-form {
