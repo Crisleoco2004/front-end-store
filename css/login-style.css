@@ -1,3 +1,13 @@
+:root {
+    --red-error: rgb(231, 82, 82, 0.5);
+    --btn-green: #4cdd7c;
+    --btn-red: #e27e8f;
+    --background: #252526;
+    --text: #FFF;
+    --highlight: #ae50fb;
+    --background-container: rgba(227, 227, 227, .3);
+}
+
 * {
     box-sizing: border-box;
     margin: 0;
@@ -10,13 +20,94 @@ html {
 }
 
 body {
+    position: relative;
+    z-index: 1;
     display: flex;
+    flex-direction: column;
     width: 100%;
     height: 100vh;
-    background-color: rgba(227, 227, 227, .5);
+    will-change: background-color;
+    transition: background-color 0.5s;
+    background-color: var(--background);
+    overflow: hidden;
+}
+
+header {
+    z-index: 3;
+    display: flex;
+    justify-self: flex-start;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    height: 80px;
+    margin: 0 auto;
+    padding: 0 30px;
+}
+
+.container-icon {
+    width: 60px;
+    height: 60px;
+    padding: 10px;
+    opacity: 0.7;
+    will-change: background-color;
+    transition: background-color 0.5s;
+}
+
+.icon {
+    width: 100%;
+    height: 100%;
+    background-image: url("../images/online-shopping.svg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.theme-switch {
+    --background: rgb(232, 194, 250);
+    --text: #252526;
+    color: var(--text);
+    width: 70px;
+    height: 30px;
+    background-color: var(--highlight);
+    border-radius: 50px;
+    position: relative;
+    cursor: pointer;
+    will-change: background-color;
+    transition: background-color 0.5s;
+}
+
+.switch {
+    background: rgb(232, 194, 250);
+    width: 24px;
+    height: 24px;
+    background-color: var(--background);
+    border-radius: 100%;
+    position: absolute;
+    top: 3px;
+    left: 4px;
+    transition: 0.5s all ease;
+}
+
+.light-theme {
+    --background: rgb(232, 194, 250);
+    --text: #000;
+    --background-container: rgba(100, 100, 100, 0.3);
+    background-color: var(--background);
+    will-change: background-color;
+    transition: background-color 0.5s;
+}
+
+.light-theme .theme-switch {
+    background-color: var(--text);
+    will-change: background-color;
+    transition: background-color 0.5s;
+}
+
+.light-theme .switch {
+    transform: translateX(37px);
 }
 
 main {
+    z-index: 3;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -28,16 +119,24 @@ main {
     padding: 30px;
     font-size: 1.5rem;
     text-align: left;
+    will-change: background-color;
+    transition: background-color 0.5s;
 }
 
 .title-container {
-    flex-grow: 1;
+    width: 100%;
+    height: 30px;
     display: flex;
-    align-items: center;
+    align-items: flex-start;
+}
+
+.main-title {
+    color: white;
 }
 
 .main-form {
-    flex-grow: 3;
+    width: 100%;
+    height: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -48,7 +147,7 @@ main {
 .form-message-error {
     display: none;
     padding: 10px 20px;
-    background-color: rgb(231, 82, 82, 0.8);
+    background-color: var(--red-error);
     color: white;
     font-weight: 500;
     border-radius: 10px;
@@ -60,9 +159,10 @@ main {
     flex-direction: column;
 }
 
-.input-password-container-index {
+.input-password-container-login {
     margin-bottom: 10px;
 }
+
 
 .btn-view-password {
     position: absolute;
@@ -89,7 +189,15 @@ button:hover {
     cursor: pointer;
 }
 
-.btn-index {
+.btn-container {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 100%;
+    height: auto;
+}
+
+.btn-login {
     height: 50px;
     width: 100%;
     border-radius: 10px;
@@ -103,20 +211,18 @@ button:hover {
 }
 
 .btn-primary {
-    background-color: #4cdd7c;
-    opacity: 0.7;
+    background-color: var(--btn-green);
 }
 
 .btn-secondary {
-    background-color: #e27e8f;
-    opacity: 0.7;
+    background-color: var(--btn-red);
 }
 
-.btn-index:active {
-    opacity: 1;
-}
 
 @media(min-width:400px) {
+    header {
+        padding: 30px 60px 0 60px;
+    }
     main {
         padding: 60px;
     }

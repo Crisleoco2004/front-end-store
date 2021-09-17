@@ -54,3 +54,12 @@ const validateAdmin = () => {
         errorContainer.style.display = 'block';
     }
 }
+
+//ALTERNAR MODO OSCURO
+
+let body = document.body;
+let themeSwitch = document.getElementById("theme-switch");
+
+themeSwitch.addEventListener("click", () => {
+    body.classList.toggle("light-theme")
+})
