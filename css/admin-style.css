@@ -1,3 +1,10 @@
+:root {
+    --background: #252526;
+    --text: #FFF;
+    --highlight: #ae50fb;
+    --background-container: rgba(227, 227, 227, .3);
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -10,8 +17,11 @@ html {
 }
 
 body {
+    position: relative;
+    z-index: 1;
     width: 100%;
     height: 100vh;
+    background-color: #252526;
 }
 
 a {
@@ -29,9 +39,14 @@ img {
 }
 
 header {
+    z-index: 3;
+    position: relative;
     width: 100%;
     height: 70px;
-    background-color: rgba(227, 227, 227, .5);
+    background-color: var(--background-container);
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+    backdrop-filter: blur(4px);
+    border: 1px solid rgba(255, 255, 255, 0.18);
 }
 
 .navbar-admin {
@@ -87,6 +102,7 @@ header {
 }
 
 main {
+    z-index: 3;
     position: relative;
     width: auto;
     height: calc(100vh - 180px);
@@ -95,17 +111,12 @@ main {
     justify-content: flex-end;
     margin: 20px;
     padding: 20px;
-    background-color: rgba(227, 227, 227, .5);
     border-radius: 10px;
     gap: 20px;
 }
 
 .message-section {
     order: 1;
-}
-
-.btn-group-section {
-    order: 4;
 }
 
 .input-group-section {
@@ -118,27 +129,41 @@ main {
 
 .message-section {
     position: absolute;
+    height: 100%;
     top: 20px;
     left: 20px;
     right: 20px;
     width: calc(100% - 40px);
-    min-height: 100px;
+    min-height: 50px;
     max-height: calc(100% - 400px);
     background-color: rgba(255, 255, 255, 0.5);
+    border-radius: 10px;
+    overflow-y: scroll;
+}
+
+.message-section::-webkit-scrollbar-thumb {
+    width: 10px;
+}
+.message-section::-webkit-scrollbar {
+    width: 10px;
     border-radius: 10px;
 }
 
 .btn-group-section {
+    z-index: 3;
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 20px;
+    gap: 10px;
     position: fixed;
     width: 100vw;
     height: 70px;
     bottom: 0;
     left: 0;
-    background-color: rgba(238, 238, 238, 0.5);
+    background-color: var(--background-container);
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+    backdrop-filter: blur(4px);
+    border: 1px solid rgba(255, 255, 255, 0.18);
 }
 
 
@@ -152,7 +177,14 @@ main {
     display: flex;
     flex-direction: column;
     gap: 10px;
+    height: 200px;
+    overflow-y: scroll;
 }
+
+.input-general {
+    background-color: rgb(255, 255, 255, 0.7);
+}
+
 
 .crud-section {
     display: flex;
@@ -167,7 +199,7 @@ main {
     background: rgba(173, 173, 173, 0.5);
     opacity: 0.7;
     border-radius: 10px;
-    padding: 10px;
+    padding: 5px;
 }
 
 .btn-admin-crud {
@@ -176,31 +208,26 @@ main {
     padding: 5px;
 }
 
+.btn-a img{
+    opacity: 0.5
+}
 
-@media(min-width: 500px) {
-
-    .navbar-admin {
-        padding: 0 50px;
+@media(min-width: 400px) {
+    .btn-group-section {
+        gap: 20px;
     }
-
-    .container-icon:hover {
-        background: rgba(173, 173, 173, 0.7);
+    .btn-admin {
+        padding: 10px;
     }
+}
 
-    .settings-icon {
-        will-change: transform;
-        transition: transform 1s;
+@media (min-height: 665px) {
+    .input-group-section {
+        height: auto;
     }
-
-    .menu__container-settings:hover .settings-icon {
-        transform: rotate(180deg);
+    .input-group-section {
+        overflow-y: auto;
     }
-
-    /* main {
-        height: calc(100vh - 110px);
-        margin: 40px;
-        padding: 40px;
-    } */
 }
 
 /* background-color: rgba(255, 255, 255, 0.3) */

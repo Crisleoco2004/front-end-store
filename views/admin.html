@@ -12,11 +12,19 @@
     <link rel="preconnect" href="https://use.fontawesome.com">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css">
     <link rel="shortcut icon" href="../images/shop-icon.png" type="image/x-icon">
+    <link rel="stylesheet" href="../css/background.css" media="(min-width: 500px)">
     <link rel="stylesheet" href="../css/admin-style.css" >
     <link rel="stylesheet" href="../css/general.css">
     <link rel="stylesheet" href="../css/admin-media.css" media="(min-width: 500px)">
 </head>
 <body>
+    <div class="background" style="display: none;">
+        <div class="circle circle-1" id="circle-1"></div>
+        <div class="circle circle-2"></div>
+        <div class="circle circle-3"></div>
+        <div class="circle circle-4"></div>
+        <div class="circle circle-5"></div>
+    </div>
     <header>
         <nav class="navbar-admin">
             <div class="navbar__container-logo">
@@ -31,23 +39,14 @@
                 </div>
                 <div class="menu__container-settings container-icon">
                     <i class="fas fa-cog settings-icon"></i>
+                    <div class="settings"> </div>
                 </div>
             </div>
         </nav>
     </header>
 
     <main>
-        <section class="btn-group-section">
-            <button class="btn-admin" type="button"><img src="../images/user.svg" alt=""></button>
-            <button class="btn-admin" type="button"><img src="../images/customer.svg" alt="" srcset=""></button>
-            <button class="btn-admin" type="button"><img src="../images/supplier.svg" alt="" srcset=""></button>
-            <button class="btn-admin" type="button"><img src="../images/product.svg" alt="" srcset=""></button>
-            <button class="btn-admin" type="button"><img src="../images/sale.svg" alt="" srcset=""></button>
-            <button class="btn-admin" type="button"><img src="../images/report.svg" alt="" srcset=""></button>
-        </section>
-        <section class="message-section">
-
-        </section>
+        <section class="message-section"></section>
         <section class="input-group-section">
             <label class="input-container-admin input-container-general">
                 <input class="input-general" id="input-cedula" type="text" title="" required>
@@ -71,11 +70,20 @@
             </label>
         </section>
         <section class="crud-section">
-            <button class="btn-admin-crud" type="button"><img src="../images/search.svg" alt="" srcset=""></button>
-            <button class="btn-admin-crud" type="button"><img src="../images/update.svg" alt="" srcset=""></button>
+            <button class="btn-admin-crud btn-a" type="button"><img src="../images/search.svg" alt="" srcset=""></button>
+            <button class="btn-admin-crud btn-a" type="button"><img src="../images/update.svg" alt="" srcset=""></button>
             <button class="btn-admin-crud" type="submit"><img src="../images/plus.svg" alt="" srcset=""></button>
-            <button class="btn-admin-crud" type="button"><img src="../images/delete.svg" alt="" srcset=""></button>
+            <button class="btn-admin-crud btn-a" type="button"><img src="../images/delete.svg" alt="" srcset=""></button>
         </section>
     </main>
+
+    <section class="btn-group-section">
+        <button class="btn-admin" type="button"><img src="../images/user.svg" alt=""></button>
+        <button class="btn-admin" type="button"><img src="../images/customer.svg" alt="" srcset=""></button>
+        <button class="btn-admin" type="button"><img src="../images/supplier.svg" alt="" srcset=""></button>
+        <button class="btn-admin" type="button"><img src="../images/product.svg" alt="" srcset=""></button>
+        <button class="btn-admin" type="button"><img src="../images/sale.svg" alt="" srcset=""></button>
+        <button class="btn-admin" type="button"><img src="../images/report.svg" alt="" srcset=""></button>
+    </section>
 </body>
 </html>

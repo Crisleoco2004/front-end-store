@@ -49,7 +49,7 @@ btnSubmit.addEventListener('click', () => validateAdmin())
 
 const validateAdmin = () => {
     if (inputUser.value === 'admininicial' && inputPassword.value === '123456') {
-        window.location.href = '../views/app.html';
+        window.location.href = '../views/admin.html';
     } else {
         errorContainer.style.display = 'block';
     }
