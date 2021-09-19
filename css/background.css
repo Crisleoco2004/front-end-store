@@ -14,12 +14,15 @@
 
 }
 
-.circle-1{
-    width: 100px;
-    height: 100px;
-    left: 60%;
-    top: -5%;
+@media(min-width: 750px) {
+    .circle-1{
+        width: 100px;
+        height: 100px;
+        left: 60%;
+        top: -5%;
+    }
 }
+
 .circle-2{
     width: 400px;
     height: 400px;
@@ -31,7 +34,7 @@
     width: 100px;
     height: 100px;
     left: 10%;
-    bottom: 50%;
+    top: 20%;
 }
 .circle-4{
     width: 150px;

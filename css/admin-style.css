@@ -22,6 +22,9 @@ body {
     width: 100%;
     height: 100vh;
     background-color: #252526;
+    will-change: background-color;
+    transition: background-color 0.5s;
+    overflow: hidden;
 }
 
 a {
@@ -38,24 +41,35 @@ img {
     height: 100%;
 }
 
-header {
-    z-index: 3;
+.navbar {
+    display: flex;
+    justify-content: space-between;
     position: relative;
+    z-index: 4;
     width: 100%;
     height: 70px;
+    padding: 0 10px;
     background-color: var(--background-container);
     box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
     backdrop-filter: blur(4px);
     border: 1px solid rgba(255, 255, 255, 0.18);
 }
 
-.navbar-admin {
+.navbar-btn {
+    width: 100vw;
+    height: 70px;
+    position: absolute;
+    justify-content: center;
+    transform: translate(10px, calc(100vh - 70px));
+    left: -10px;
+    background-color: var(--background-container);
+}
+
+.navbar > div{
     display: flex;
-    justify-content: space-between;
-    width: 100%;
-    height: 100%;
-    padding: 0 10px;
-    transition: padding 0.5s;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
 }
 
 .navbar__container-logo {
@@ -71,8 +85,19 @@ header {
     width: 50px;
     height: 50px;
     padding: 5px;
-    background: rgba(173, 173, 173, 0.5);
+    background: rgba(255, 255, 255, 0.5);
     border-radius: 10px;
+    transition: background-color 0.1s;
+}
+
+.container-icon:hover,
+.container-icon:active,
+.container-icon:focus {
+    background: rgb(255, 255, 255);
+}
+
+.container-icon:hover {
+    cursor: pointer;
 }
 
 .link-index {
@@ -87,6 +112,112 @@ header {
     background-size: cover;
     background-position: center;
 }
+
+.menu__container-settings {
+    position: relative;
+}
+
+.settings {
+    width: 110px;
+    height: 100px;
+    position: absolute;
+    margin: -10px 0;
+    padding: 10px;
+    top: 75px;
+    right: 0;
+    color: #252526;
+    background-color: rgb(255, 255, 255);
+    transform: scaleY(0);
+    transform-origin: top;
+    transition: transform 0.2s 0.2s linear;
+    border-radius: 10px;
+    box-shadow: 0 8px 32px 0 rgba(43, 43, 54, 0.37);
+}
+
+.settings::before {
+    content: '';
+    position: absolute;
+    top: -10px;
+    right: 20px;
+    width: 0;
+    height: 0;
+    border-bottom: 10px solid rgb(255, 255, 255);
+    border-right: 5px solid transparent;
+    border-left: 5px solid transparent;
+}
+
+.menu__container-settings:hover .settings,
+.menu__container-settings:active .settings,
+.settings:hover{
+    transform: scaleY(1)
+}
+
+.settings h3 {
+    display: block;
+    padding-bottom: 2px;
+    font-weight: 900;
+    font-size: 1.3rem;
+    border-bottom: 1px solid rgb(46, 46, 46);
+    margin-bottom: 5px;
+}
+
+.container-theme {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.container-theme span {
+    font-weight: 700;
+    font-size: 1.2rem
+}
+
+.theme-switch {
+    --background: rgb(232, 194, 250);
+    --text: #252526;
+    color: var(--text);
+    width: 45px;
+    height: 18px;
+    background-color: var(--highlight);
+    border-radius: 50px;
+    position: relative;
+    cursor: pointer;
+    will-change: background-color;
+    transition: background-color 0.5s;
+}
+
+.switch {
+    background: rgb(232, 194, 250);
+    width: 12px;
+    height: 12px;
+    background-color: var(--background);
+    border-radius: 100%;
+    position: absolute;
+    top: 3px;
+    left: 4px;
+    transition: 0.5s all ease;
+}
+
+.light-theme {
+    --background: rgb(232, 194, 250);
+    --text: #000;
+    --background-container: rgba(100, 100, 100, 0.3);
+    background-color: var(--background);
+    will-change: background-color;
+    transition: background-color 0.5s;
+}
+
+.light-theme .theme-switch {
+    background-color: var(--text);
+    will-change: background-color;
+    transition: background-color 0.5s;
+}
+
+.light-theme .switch {
+    transform: translateX(25px);
+}
+
+
 
 .navbar__menu {
     display: flex;
@@ -149,24 +280,6 @@ main {
     border-radius: 10px;
 }
 
-.btn-group-section {
-    z-index: 3;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 10px;
-    position: fixed;
-    width: 100vw;
-    height: 70px;
-    bottom: 0;
-    left: 0;
-    background-color: var(--background-container);
-    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
-    backdrop-filter: blur(4px);
-    border: 1px solid rgba(255, 255, 255, 0.18);
-}
-
-
 .input-container-admin {
     width: 100%;
     display: flex;
@@ -196,20 +309,24 @@ main {
 .btn-admin {
     width: 50px;
     height: 50px;
-    background: rgba(173, 173, 173, 0.5);
-    opacity: 0.7;
+    background: rgba(255, 255, 255, 0.5);
     border-radius: 10px;
     padding: 5px;
 }
 
 .btn-admin-crud {
-    background: rgba(173, 173, 173, 0.5);
+    background: rgba(255, 255, 255, 0.5);
     border-radius: 10px;
     padding: 5px;
+    will-change: background-color;
+    transition: background-color 0.1s;
 }
 
-.btn-a img{
-    opacity: 0.5
+.btn-admin-crud:hover,
+.btn-admin:hover {
+    cursor: pointer;
+    background: rgba(255, 255, 255);
+
 }
 
 @media(min-width: 400px) {

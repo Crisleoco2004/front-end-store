@@ -15,75 +15,83 @@
     <link rel="stylesheet" href="../css/background.css" media="(min-width: 500px)">
     <link rel="stylesheet" href="../css/admin-style.css" >
     <link rel="stylesheet" href="../css/general.css">
-    <link rel="stylesheet" href="../css/admin-media.css" media="(min-width: 500px)">
+    <link rel="stylesheet" href="../css/admin-tablet.css" media="(min-width: 500px)">
+    <link rel="stylesheet" href="../css/admin-desktop.css" media="(min-width: 750px)">
 </head>
 <body>
     <div class="background" style="display: none;">
-        <div class="circle circle-1" id="circle-1"></div>
+        <div class="circle circle-1"></div>
         <div class="circle circle-2"></div>
         <div class="circle circle-3"></div>
         <div class="circle circle-4"></div>
         <div class="circle circle-5"></div>
     </div>
-    <header>
-        <nav class="navbar-admin">
-            <div class="navbar__container-logo">
-                <a class="link-index container-icon" href="../index.html">
-                    <div class="logo">
+
+    <nav class="navbar">
+        <div class="">
+            <a class="link-index container-icon" href="../index.html">
+                <div class="logo">
+                </div>
+            </a>
+        </div>
+        <div class="navbar-btn">
+        <button class="btn-admin" id="btn-users" type="button"><img src="../images/user.svg" alt="user"></button>
+        <button class="btn-admin" id="btn-customers" type="button"><img src="../images/customer.svg" alt="customer"></button>
+        <button class="btn-admin" id="btn-suppliers" type="button"><img src="../images/supplier.svg" alt="supplier"></button>
+        <button class="btn-admin" id="btn-products" type="button"><img src="../images/product.svg" alt="product"></button>
+        <button class="btn-admin" id="btn-sales" type="button"><img src="../images/sale.svg" alt="sales"></button>
+        <button class="btn-admin" id="btn-reports" type="button"><img src="../images/report.svg" alt="reports"></button>
+        </div>
+        <div class="">
+            <div class="menu__container-profile container-icon">
+                <i class="fas fa-user-circle"></i>
+            </div>
+            <div class="menu__container-settings container-icon">
+                <i class="fas fa-cog settings-icon"></i>
+                <div class="settings">
+                    <h3>Configuración</h3>
+                    <div class="container-theme">
+                        <span>Tema</span>
+                        <div class="theme-switch" id="theme-switch" title="switch theme">
+                            <div class="switch"></div>
+                        </div>
                     </div>
-                </a>
-            </div>
-            <div class="navbar__menu">
-                <div class="menu__container-profile container-icon">
-                    <i class="fas fa-user-circle"></i>
-                </div>
-                <div class="menu__container-settings container-icon">
-                    <i class="fas fa-cog settings-icon"></i>
-                    <div class="settings"> </div>
                 </div>
             </div>
-        </nav>
-    </header>
+        </div>
+    </nav>
 
     <main>
         <section class="message-section"></section>
-        <section class="input-group-section">
+        <form class="input-group-section" action="">
             <label class="input-container-admin input-container-general">
-                <input class="input-general" id="input-cedula" type="text" title="" required>
-                <span class="input-span-general" id="">Cédula</span>
+                <input class="input-general" id="input-data-1" type="text" title="" required>
+                <span class="input-span-general" id="span-data-1"></span>
             </label>
             <label class="input-container-admin input-container-general">
-                <input class="input-general" id="input-name" type="text" title="" required>
-                <span class="input-span-general" id="">Nombre completo</span>
+                <input class="input-general" id="input-data-2" type="text" title="" required>
+                <span class="input-span-general" id="span-data-2"></span>
             </label>
             <label class="input-container-admin input-container-general">
-                <input class="input-general" id="input-email" type="text" title="" required>
-                <span class="input-span-general" id="">Correo Electronico</span>
+                <input class="input-general" id="input-data-3" type="text" title="" required>
+                <span class="input-span-general" id="span-data-3"></span>
             </label>
             <label class="input-container-admin input-container-general">
-                <input class="input-general" id="input-nickname" type="text" title="" required>
-                <span class="input-span-general" id="">Usuario</span>
+                <input class="input-general" id="input-data-4" type="text" title="" required>
+                <span class="input-span-general" id="span-data-4"></span>
             </label>
             <label class="input-container-admin input-container-general">
-                <input class="input-general" id="input-password" type="text" title="" required>
-                <span class="input-span-general" id="">Contraseña</span>
+                <input class="input-general" id="input-data-5" type="text" title="" required>
+                <span class="input-span-general" id="span-data-5"></span>
             </label>
-        </section>
-        <section class="crud-section">
-            <button class="btn-admin-crud btn-a" type="button"><img src="../images/search.svg" alt="" srcset=""></button>
-            <button class="btn-admin-crud btn-a" type="button"><img src="../images/update.svg" alt="" srcset=""></button>
-            <button class="btn-admin-crud" type="submit"><img src="../images/plus.svg" alt="" srcset=""></button>
-            <button class="btn-admin-crud btn-a" type="button"><img src="../images/delete.svg" alt="" srcset=""></button>
-        </section>
+            <div class="crud-section">
+                <button class="btn-admin-crud" type="submit"><img src="../images/search.svg" alt="" srcset=""></button>
+                <button class="btn-admin-crud" type="submit"><img src="../images/update.svg" alt="" srcset=""></button>
+                <button class="btn-admin-crud" type="submit"><img src="../images/plus.svg" alt="" srcset=""></button>
+                <button class="btn-admin-crud" type="submit"><img src="../images/delete.svg" alt="" srcset=""></button>
+            </div>
+        </form>
     </main>
-
-    <section class="btn-group-section">
-        <button class="btn-admin" type="button"><img src="../images/user.svg" alt=""></button>
-        <button class="btn-admin" type="button"><img src="../images/customer.svg" alt="" srcset=""></button>
-        <button class="btn-admin" type="button"><img src="../images/supplier.svg" alt="" srcset=""></button>
-        <button class="btn-admin" type="button"><img src="../images/product.svg" alt="" srcset=""></button>
-        <button class="btn-admin" type="button"><img src="../images/sale.svg" alt="" srcset=""></button>
-        <button class="btn-admin" type="button"><img src="../images/report.svg" alt="" srcset=""></button>
-    </section>
+    <script src="../js/admin.js"></script>
 </body>
 </html>
