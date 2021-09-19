@@ -161,6 +161,15 @@ img {
     margin-bottom: 5px;
 }
 
+.settings-icon {
+    will-change: transform;
+    transition: transform 0.5s 0.5s linear;
+}
+
+.menu__container-settings:hover .settings-icon {
+    transform: rotate(180deg);
+}
+
 .container-theme {
     display: flex;
     align-items: center;

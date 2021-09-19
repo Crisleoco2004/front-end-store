@@ -12,13 +12,3 @@ main {
 .navbar > div{
     gap: 20px;
 }
-
-
-.settings-icon {
-    will-change: transform;
-    transition: transform 0.5s 0.5s linear;
-}
-
-.menu__container-settings:hover .settings-icon {
-    transform: rotate(180deg);
-}
