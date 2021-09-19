@@ -246,6 +246,12 @@ main {
     gap: 20px;
 }
 
+.form-people {
+    display: flex;
+    flex-direction: column;
+    gap: 20px
+}
+
 .message-section {
     order: 1;
 }
@@ -290,7 +296,7 @@ main {
     display: flex;
     flex-direction: column;
     gap: 10px;
-    height: 200px;
+    height: 150px;
     overflow-y: scroll;
 }
 
@@ -315,11 +321,18 @@ main {
 }
 
 .btn-admin-crud {
+    height: 30px;
+    width: 30px;
     background: rgba(255, 255, 255, 0.5);
     border-radius: 10px;
     padding: 5px;
     will-change: background-color;
     transition: background-color 0.1s;
+}
+
+.btn-admin-crud img {
+    width: 100%;
+    height: 100%;
 }
 
 .btn-admin-crud:hover,
@@ -338,11 +351,9 @@ main {
     }
 }
 
-@media (min-height: 665px) {
+@media (min-height: 650px) {
     .input-group-section {
         height: auto;
-    }
-    .input-group-section {
         overflow-y: auto;
     }
 }
