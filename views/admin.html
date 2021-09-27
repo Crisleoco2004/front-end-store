@@ -62,9 +62,10 @@
     </nav>
 
     <main>
-        <section class="message-section"></section>
+        <section class="message-section">
+        </section>
         <form class="form-people" action="">
-            <div class="input-group-section">
+            <div class="input-group-section" id="input-group-section">
                 <label class="input-container-admin input-container-general">
                     <input class="input-general" id="input-data-1" type="text" title="" required>
                     <span class="input-span-general" id="span-data-1"></span>
@@ -85,6 +86,10 @@
                     <input class="input-general" id="input-data-5" type="text" title="" required>
                     <span class="input-span-general" id="span-data-5"></span>
                 </label>
+            </div>
+            <div class="file-section" id="file-section">
+                <input type="file" id="input-file" class="input-file" accept=".csv"/>
+                <button class="btn-file" type="submit">Enviar</button>
             </div>
             <div class="crud-section">
                 <button class="btn-admin-crud" type="submit"><img src="../images/search.svg" alt="" srcset=""></button>

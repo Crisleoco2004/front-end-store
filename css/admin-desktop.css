@@ -5,7 +5,7 @@ body {
 
 main {
     margin: 0 auto;
-    height: 700px;
+    height: 500px;
     width: 500px;
 }
 
@@ -18,7 +18,7 @@ main {
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
-    padding: 50px 0;
+    padding: 10px 0;
     background-color: var(--background-container);
     box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
     backdrop-filter: blur(4px);
@@ -30,7 +30,7 @@ main {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    gap: 20px;
+    gap: 10px;
 }
 
 .navbar-btn {
@@ -41,6 +41,9 @@ main {
     transform:unset;
     left: unset;
     background-color: unset;
+    backdrop-filter: unset;
+    border: unset;
+    box-shadow: unset;
 }
 
 
@@ -65,4 +68,20 @@ main {
 .settings:hover{
     transform: scaleX(1)
 }
+
+@media(min-height: 700px) {
+    .navbar {
+        padding: 50px 0;
+    }
+
+    .navbar > div{
+        gap: 20px;
+    }
+
+    main {
+        height: 700px;
+        width: 500px;
+    }
+}
+
 

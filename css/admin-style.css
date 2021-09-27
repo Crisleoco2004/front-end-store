@@ -50,9 +50,6 @@ img {
     height: 70px;
     padding: 0 10px;
     background-color: var(--background-container);
-    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
-    backdrop-filter: blur(4px);
-    border: 1px solid rgba(255, 255, 255, 0.18);
 }
 
 .navbar-btn {
@@ -63,6 +60,9 @@ img {
     transform: translate(10px, calc(100vh - 70px));
     left: -10px;
     background-color: var(--background-container);
+    backdrop-filter: blur(4px);
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+    border: 1px solid rgba(255, 255, 255, 0.18);
 }
 
 .navbar > div{
@@ -163,7 +163,7 @@ img {
 
 .settings-icon {
     will-change: transform;
-    transition: transform 0.5s 0.5s linear;
+    transition: transform 0.5s linear;
 }
 
 .menu__container-settings:hover .settings-icon {
@@ -226,8 +226,6 @@ img {
     transform: translateX(25px);
 }
 
-
-
 .navbar__menu {
     display: flex;
     justify-content: space-evenly;
@@ -248,7 +246,7 @@ main {
     height: calc(100vh - 180px);
     display: flex;
     flex-direction: column;
-    justify-content: flex-end;
+    justify-content: space-between;
     margin: 20px;
     padding: 20px;
     border-radius: 10px;
@@ -257,31 +255,15 @@ main {
 
 .form-people {
     display: flex;
+    height: 55%;
     flex-direction: column;
+    justify-content: flex-end;
     gap: 20px
 }
 
 .message-section {
-    order: 1;
-}
-
-.input-group-section {
-    order: 2;
-}
-
-.crud-section {
-    order: 3;
-}
-
-.message-section {
-    position: absolute;
-    height: 100%;
-    top: 20px;
-    left: 20px;
-    right: 20px;
-    width: calc(100% - 40px);
-    min-height: 50px;
-    max-height: calc(100% - 400px);
+    width: 100%;
+    height: 45%;
     background-color: rgba(255, 255, 255, 0.5);
     border-radius: 10px;
     overflow-y: scroll;
@@ -295,6 +277,51 @@ main {
     border-radius: 10px;
 }
 
+.file-section {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: 100%;
+    padding: 20px;
+    /* background-color: rgba(255, 255, 255, 0.5); */
+    border-radius: 10px;
+}
+
+.input-file {
+    width: 100%;
+    padding: 25px;
+    border-radius: 10px;
+    background-color: rgba(255, 255, 255, 0.5);
+    font-weight: 700;
+}
+
+::-webkit-file-upload-button {
+    padding: 10px;
+    border-radius: 50px;
+    outline: none;
+    border: none;
+    background-color: rgba(44, 44, 44, 0.5);
+    margin-right: 20px;
+    color: white;
+    font-weight: 700;
+}
+
+
+
+.btn-file {
+    width: 100%;
+    font-family: 'Segoe UI', sans-serif;
+    font-weight: bold;
+    margin-top: 20px;
+    padding: 15px 0;
+    border-radius: 10px;
+    color: white;
+    background-color: rgba(194, 50, 230, 0.9);
+
+}
+
 .input-container-admin {
     width: 100%;
     display: flex;
@@ -302,7 +329,7 @@ main {
 }
 
 .input-group-section {
-    display: flex;
+    display: none;
     flex-direction: column;
     gap: 10px;
     height: 150px;
@@ -367,6 +394,11 @@ main {
     }
 }
 
+@media(min-width: 500px) {
+    .btn-file {
+        background-color: rgba(44, 44, 44, 0.7);
+    }
+}
 /* background-color: rgba(255, 255, 255, 0.3) */
 /* box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37); */
 /* backdrop-filter: blur(4px) */

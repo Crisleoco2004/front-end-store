@@ -45,7 +45,7 @@ inputPassword.addEventListener('keypress', (e) => {
     }
 })
 
-btnSubmit.addEventListener('click', () => validateAdmin())
+btnSubmit.addEventListener('click', () => validateAdmin());
 
 const validateAdmin = () => {
     if (inputUser.value === 'admininicial' && inputPassword.value === '123456') {
@@ -61,5 +61,5 @@ let body = document.body;
 let themeSwitch = document.getElementById("theme-switch");
 
 themeSwitch.addEventListener("click", () => {
-    body.classList.toggle("light-theme")
+    body.classList.toggle("light-theme");
 })

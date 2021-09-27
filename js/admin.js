@@ -24,6 +24,10 @@ const SPAN_3 = document.getElementById("span-data-3");
 const SPAN_4 = document.getElementById("span-data-4");
 const SPAN_5 = document.getElementById("span-data-5");
 
+//CONTENEDORES
+const INPUT_CONTAINER = document.getElementById("input-group-section");
+const FILE_CONTAINER = document.getElementById("file-section");
+
 
 //CAMBIO DE TEXTO EN LOS INPUTS
 BTN_USER.addEventListener('click', () => {
@@ -32,6 +36,8 @@ BTN_USER.addEventListener('click', () => {
     SPAN_3.innerHTML = "Correo Electrónico";
     SPAN_4.innerHTML = "Usuario";
     SPAN_5.innerHTML = "Contraseña";
+    INPUT_CONTAINER.style.display ="flex";
+    FILE_CONTAINER.style.display = "none";
 })
 BTN_CUSTOMER.addEventListener('click', () => {
     SPAN_1.innerHTML = "Cédula";
@@ -39,6 +45,8 @@ BTN_CUSTOMER.addEventListener('click', () => {
     SPAN_3.innerHTML = "Dirección";
     SPAN_4.innerHTML = "Teléfono";
     SPAN_5.innerHTML = "Correo Electrónico";
+    INPUT_CONTAINER.style.display ="flex";
+    FILE_CONTAINER.style.display = "none";
 })
 BTN_SUPPLIER.addEventListener('click', () => {
     SPAN_1.innerHTML = "NIT";
@@ -46,15 +54,21 @@ BTN_SUPPLIER.addEventListener('click', () => {
     SPAN_3.innerHTML = "Dirección";
     SPAN_4.innerHTML = "Teléfono";
     SPAN_5.innerHTML = "Ciudad";
+    INPUT_CONTAINER.style.display ="flex";
+    FILE_CONTAINER.style.display = "none";
 })
 BTN_PRODUCT.addEventListener('click', () => {
-    alert("Característica no disponible.")
+    INPUT_CONTAINER.style.display ="none";
+    FILE_CONTAINER.style.display = "flex";
+
 })
 BTN_SALE.addEventListener('click', () => {
-    alert("Característica no disponible.")
+    INPUT_CONTAINER.style.display ="none";
+    FILE_CONTAINER.style.display = "flex";
 })
 BTN_REPORT.addEventListener('click', () => {
-    alert("Característica no disponible.")
+    INPUT_CONTAINER.style.display ="none";
+    FILE_CONTAINER.style.display = "flex";
 })
 
 //ALTERNAR MODO OSCURO
