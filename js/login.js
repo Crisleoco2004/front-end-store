@@ -3,6 +3,7 @@ let inputPassword = document.getElementById('input-password');
 let inputUser = document.getElementById('input-user');
 let errorContainer = document.getElementById('form-message-error');
 let btnSubmit = document.getElementById('btn-submit');
+let btnCloseMessage = document.getElementById('close-message');
 
 
 //Ver u ocultar contraseña
@@ -51,9 +52,13 @@ const validateAdmin = () => {
     if (inputUser.value === 'admininicial' && inputPassword.value === '123456') {
         window.location.href = '../views/admin.html';
     } else {
-        errorContainer.style.display = 'block';
+        errorContainer.style.display = 'flex';
     }
 }
+
+btnCloseMessage.addEventListener('click', () => {
+    errorContainer.style.display = 'none'
+})
 
 //ALTERNAR MODO OSCURO
 

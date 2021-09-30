@@ -27,16 +27,25 @@ const SPAN_5 = document.getElementById("span-data-5");
 //CONTENEDORES
 const INPUT_CONTAINER = document.getElementById("input-group-section");
 const FILE_CONTAINER = document.getElementById("file-section");
+const FORM_PEOPLE = document.getElementById("form-people")
 
 
 //CAMBIO DE TEXTO EN LOS INPUTS
 BTN_USER.addEventListener('click', () => {
+    //limpiar mensajes principales
+    //si hace click en buscar mostrar solo input id
+    //mostrar contenedor principal
+    //cambiar spans-variables
+    //mostrar inputs con info si hace click en una fila.
+    //mostrar inputs sin ifo si agrega uno nuevo
+    //mostrar siempre crud
     SPAN_1.innerHTML = "Cédula";
     SPAN_2.innerHTML = "Nombre Completo";
     SPAN_3.innerHTML = "Correo Electrónico";
     SPAN_4.innerHTML = "Usuario";
     SPAN_5.innerHTML = "Contraseña";
     INPUT_CONTAINER.style.display ="flex";
+    FORM_PEOPLE.style.display ="flex";
     FILE_CONTAINER.style.display = "none";
 })
 BTN_CUSTOMER.addEventListener('click', () => {

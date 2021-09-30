@@ -62,9 +62,19 @@
     </nav>
 
     <main>
-        <section class="message-section">
+        <section id="message-section" class="message-section">
+            <div class="welcome-message">
+                <article>
+                    <h3 class="welcome__subtitle">Bienvenido...</h3>
+                <h2 class="welcome__title">Papeleria WWW</h2>
+                <p class="welcome__text">Aplicación web para la gestión comercial del negocio.</p>
+                </article>
+                <figure class="welcome__img-container">
+                    <img class="welcome__img" src="https://source.unsplash.com/450x450/?stationery" alt="Imagen relacionada con una papeleria">
+                </figure>
+            </div>
         </section>
-        <form class="form-people" action="">
+        <form id="form-people" class="form-people" action="">
             <div class="input-group-section" id="input-group-section">
                 <label class="input-container-admin input-container-general">
                     <input class="input-general" id="input-data-1" type="text" title="" required>
@@ -91,7 +101,7 @@
                 <input type="file" id="input-file" class="input-file" accept=".csv"/>
                 <button class="btn-file" type="submit">Enviar</button>
             </div>
-            <div class="crud-section">
+            <div id="crud-section" class="crud-section">
                 <button class="btn-admin-crud" type="submit"><img src="../images/search.svg" alt="" srcset=""></button>
                 <button class="btn-admin-crud" type="submit"><img src="../images/update.svg" alt="" srcset=""></button>
                 <button class="btn-admin-crud" type="submit"><img src="../images/plus.svg" alt="" srcset=""></button>

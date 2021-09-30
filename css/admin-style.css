@@ -248,13 +248,12 @@ main {
     flex-direction: column;
     justify-content: space-between;
     margin: 20px;
-    padding: 20px;
     border-radius: 10px;
     gap: 20px;
 }
 
 .form-people {
-    display: flex;
+    display: none;
     height: 55%;
     flex-direction: column;
     justify-content: flex-end;
@@ -262,11 +261,25 @@ main {
 }
 
 .message-section {
+    display: grid;
+    place-content: center;
     width: 100%;
-    height: 45%;
+    height: 100%;
     background-color: rgba(255, 255, 255, 0.5);
     border-radius: 10px;
     overflow-y: scroll;
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    box-shadow: 0 8px 32px 0 rgba(12, 14, 46, 0.37);
+}
+
+.message-section::-webkit-scrollbar {
+    width: 8px;
+    background-color: transparent;
+}
+.message-section::-webkit-scrollbar-thumb {
+    width: 8px;
+    background-color: #5e5a5a;
+    border-radius: 10px;
 }
 
 .message-section::-webkit-scrollbar-thumb {
@@ -277,6 +290,48 @@ main {
     border-radius: 10px;
 }
 
+.welcome-message {
+    display: flex;
+    justify-content: flex-end;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    padding: 40px 2px 40px 10px;
+    font-size: 1.8rem;
+    color: var(--text);
+    gap: 20px;
+}
+
+.welcome-message figure {
+    width: 100%;
+    height: 100%;
+    display: grid;
+    place-content: center;
+    align-self: flex-end;
+}
+
+.welcome-message figure img{
+    border-radius: 10px;
+    object-fit: cover;
+}
+
+.welcome-message article {
+    order: 2
+}
+
+.welcome-message h2 {
+    font-family: 'Segoe UI', Tahoma, sans-serif;
+    margin: 10px 0;
+}
+
+.welcome-message h3 {
+    font-weight: 500;
+}
+
+.welcome-message p {
+    font-weight: 400;
+}
+
 .file-section {
     display: none;
     flex-direction: column;
@@ -284,8 +339,6 @@ main {
     justify-content: center;
     height: 100%;
     width: 100%;
-    padding: 20px;
-    /* background-color: rgba(255, 255, 255, 0.5); */
     border-radius: 10px;
 }
 
@@ -302,13 +355,19 @@ main {
     border-radius: 50px;
     outline: none;
     border: none;
+    transition: background-color 0.5s;
     background-color: rgba(44, 44, 44, 0.5);
     margin-right: 20px;
     color: white;
     font-weight: 700;
 }
 
+::-webkit-file-upload-button:hover,
+::-webkit-file-upload-button:hover {
+    background-color: rgba(44, 44, 44, 0.9);
+    cursor: pointer;
 
+}
 
 .btn-file {
     width: 100%;
@@ -319,7 +378,13 @@ main {
     border-radius: 10px;
     color: white;
     background-color: rgba(194, 50, 230, 0.9);
+    transition: background-color 0.5s;
+}
 
+.btn-file:hover,
+.btn-file:active {
+    background-color: rgba(215, 105, 243, 0.9);
+    cursor: pointer;
 }
 
 .input-container-admin {
@@ -396,7 +461,12 @@ main {
 
 @media(min-width: 500px) {
     .btn-file {
-        background-color: rgba(44, 44, 44, 0.7);
+        background-color: rgba(44, 44, 44, 0.9);
+    }
+
+    .btn-file:hover,
+    .btn-file:active {
+        background-color: rgba(71, 71, 71, 0.9);
     }
 }
 /* background-color: rgba(255, 255, 255, 0.3) */

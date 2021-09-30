@@ -84,4 +84,21 @@ main {
     }
 }
 
+@media(min-width: 1124px) {
+    main {
+        width: 80%;
+        max-width: 1250px;
+        flex-direction: row;
+    }
+
+    .message-section {
+        width: 100%;
+    }
+
+    .form-people {
+        width: 50%;
+        align-self: center;
+    }
+}
+
 
