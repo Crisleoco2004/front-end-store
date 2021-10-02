@@ -29,22 +29,48 @@
 
     <nav class="navbar">
         <div class="">
-            <a class="link-index container-icon" href="../index.html">
+            <button class="btn-admin" id="btn-home">
+                <span class="btn-span">Inicio</span>
                 <div class="logo">
                 </div>
-            </a>
+            </button>
         </div>
         <div class="navbar-btn">
-        <button class="btn-admin" id="btn-users" type="button"><img src="../images/user.svg" alt="user"></button>
-        <button class="btn-admin" id="btn-customers" type="button"><img src="../images/customer.svg" alt="customer"></button>
-        <button class="btn-admin" id="btn-suppliers" type="button"><img src="../images/supplier.svg" alt="supplier"></button>
-        <button class="btn-admin" id="btn-products" type="button"><img src="../images/product.svg" alt="product"></button>
-        <button class="btn-admin" id="btn-sales" type="button"><img src="../images/sale.svg" alt="sales"></button>
-        <button class="btn-admin" id="btn-reports" type="button"><img src="../images/report.svg" alt="reports"></button>
+        <button class="btn-admin" id="btn-users" type="button">
+            <span class="btn-span">Usuarios</span>
+            <img src="../images/user.svg" alt="user">
+        </button>
+        <button class="btn-admin" id="btn-customers" type="button">
+            <span class="btn-span">Clientes</span>
+            <img src="../images/customer.svg" alt="customer">
+        </button>
+        <button class="btn-admin" id="btn-suppliers" type="button">
+            <span class="btn-span">Proveedores</span>
+            <img src="../images/supplier.svg" alt="supplier">
+        </button>
+        <button class="btn-admin" id="btn-products" type="button">
+            <span class="btn-span">Productos</span>
+            <img src="../images/product.svg" alt="product">
+        </button>
+        <button class="btn-admin" id="btn-sales" type="button">
+            <span class="btn-span">Ventas</span>
+            <img src="../images/sale.svg" alt="sales">
+        </button>
+        <button class="btn-admin" id="btn-reports" type="button">
+            <span class="btn-span">Reportes</span>
+            <img src="../images/report.svg" alt="reports">
+        </button>
         </div>
         <div class="">
             <div class="menu__container-profile container-icon">
                 <i class="fas fa-user-circle"></i>
+                <div class="profile">
+                    <h3>NickName</h3>
+                    <div class="sign-out">
+                        <span>Cerrar sesión</span>
+                        <i class="fas fa-sign-out-alt"></i>
+                    </div>
+                </div>
             </div>
             <div class="menu__container-settings container-icon">
                 <i class="fas fa-cog settings-icon"></i>
@@ -63,18 +89,25 @@
 
     <main>
         <section id="message-section" class="message-section">
-            <div class="welcome-message">
+            <div class="message neutral-message">
+                <p>
+                    Selecciona una de las opciones del menu para empezar
+                </p>
+                <i class="fas fa-times close-message"></i>
+            </div>
+            <div class="welcome-message" id = "welcome-message">
                 <article>
-                    <h3 class="welcome__subtitle">Bienvenido...</h3>
+                    <h3 class="welcome__subtitle">Bienvenido</h3>
                 <h2 class="welcome__title">Papeleria WWW</h2>
                 <p class="welcome__text">Aplicación web para la gestión comercial del negocio.</p>
                 </article>
                 <figure class="welcome__img-container">
-                    <img class="welcome__img" src="https://source.unsplash.com/450x450/?stationery" alt="Imagen relacionada con una papeleria">
+                    <img id="welcome-img" class="welcome__img" src="#" alt="Imagen relacionada">
                 </figure>
             </div>
         </section>
         <form id="form-people" class="form-people" action="">
+            <h2 id="title-section" class="title-section"></h2>
             <div class="input-group-section" id="input-group-section">
                 <label class="input-container-admin input-container-general">
                     <input class="input-general" id="input-data-1" type="text" title="" required>

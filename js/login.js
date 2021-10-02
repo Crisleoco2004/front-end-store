@@ -1,19 +1,19 @@
-let btnViewOrHidePassword = document.getElementById('btn-view-password');
-let inputPassword = document.getElementById('input-password');
-let inputUser = document.getElementById('input-user');
-let errorContainer = document.getElementById('form-message-error');
-let btnSubmit = document.getElementById('btn-submit');
-let btnCloseMessage = document.getElementById('close-message');
+let btnViewOrHidePassword = document.getElementById('btn-view-password')
+let inputPassword = document.getElementById('input-password')
+let inputUser = document.getElementById('input-user')
+let errorContainer = document.getElementById('form-message-error')
+let btnSubmit = document.getElementById('btn-submit')
+let btnCloseMessage = document.getElementById('close-message')
 
 
 //Ver u ocultar contraseña
 btnViewOrHidePassword.addEventListener('click', () => {
     if(inputPassword.attributes[2].value === 'password') {
-        inputPassword.setAttribute('type', 'text');
-        btnViewOrHidePassword.style.backgroundImage = 'url("../images/close-eye.png")';
+        inputPassword.setAttribute('type', 'text')
+        btnViewOrHidePassword.style.backgroundImage = 'url("../images/close-eye.png")'
     } else if(inputPassword.attributes[2].value === 'text') {
-        inputPassword.setAttribute('type', 'password');
-        btnViewOrHidePassword.style.backgroundImage = 'url("../images/eye.png")';
+        inputPassword.setAttribute('type', 'password')
+        btnViewOrHidePassword.style.backgroundImage = 'url("../images/eye.png")'
     }
 })
 
@@ -29,9 +29,9 @@ btnViewOrHidePassword.addEventListener('click', () => {
 inputUser.addEventListener('keypress', (e) => {
     if(e.keyCode === 13) {
         if(inputUser.value != '' && inputPassword.value != ''){
-            validateAdmin();
+            validateAdmin()
         } else {
-            inputPassword.focus();
+            inputPassword.focus()
         }
     }
 })
@@ -39,20 +39,20 @@ inputUser.addEventListener('keypress', (e) => {
 inputPassword.addEventListener('keypress', (e) => {
     if(e.keyCode === 13) {
         if(inputUser.value != '' && inputPassword.value != ''){
-            validateAdmin();
+            validateAdmin()
         } else {
-            inputUser.focus();
+            inputUser.focus()
         }
     }
 })
 
-btnSubmit.addEventListener('click', () => validateAdmin());
+btnSubmit.addEventListener('click', () => validateAdmin())
 
 const validateAdmin = () => {
     if (inputUser.value === 'admininicial' && inputPassword.value === '123456') {
-        window.location.href = '../views/admin.html';
+        window.location.href = '../views/admin.html'
     } else {
-        errorContainer.style.display = 'flex';
+        errorContainer.style.display = 'flex'
     }
 }
 
@@ -62,9 +62,9 @@ btnCloseMessage.addEventListener('click', () => {
 
 //ALTERNAR MODO OSCURO
 
-let body = document.body;
-let themeSwitch = document.getElementById("theme-switch");
+let body = document.body
+let themeSwitch = document.getElementById("theme-switch")
 
 themeSwitch.addEventListener("click", () => {
-    body.classList.toggle("light-theme");
+    body.classList.toggle("light-theme")
 })

@@ -19,8 +19,7 @@ main {
     justify-content: space-between;
     align-items: center;
     padding: 10px 0;
-    background-color: var(--background-container);
-    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+    background-color: rgba(0, 0, 0, 0.3);
     backdrop-filter: blur(4px);
     border: 1px solid rgba(255, 255, 255, 0.18);
 }
@@ -46,16 +45,61 @@ main {
     box-shadow: unset;
 }
 
+.btn-span {
+    display: none;
+    position: absolute;
+    width: auto;
+    height: auto;
+    padding: 10px;
+    background-color: white;
+    white-space: nowrap;
+    font-weight: 700;
+    font-size: 1.2rem;
+    border-radius: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 70px;
+    font-family: 'Segoe UI', Tahoma, sans-serif;
+    font-size: 1.3rem;
+}
+.btn-span::before {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 0;
+    left: -6px;
+    top: 50%;
+    transform: translateY(-50%);
+    border-bottom: 5px solid transparent;
+    border-right: 10px solid rgb(255, 255, 255);
+    border-top: 5px solid transparent;
+}
 
-.settings {
+.btn-admin:hover .btn-span,
+.btn-span:hover{
+    display: inline-block;
+}
+
+
+.settings,
+.profile {
     height: 120px;
-    top: -60px;
-    right: -130px;
     transform-origin: left;
     transform: scaleX(0)
 }
 
-.settings::before {
+.settings {
+    top: -60px;
+    right: -140px;
+}
+
+.profile {
+    top: 10px;
+    left: 70px;
+}
+
+.settings::before,
+.profile::before {
     transform: translateY(100px);
     left: -15px;
     border-bottom: 5px solid transparent;
@@ -63,9 +107,18 @@ main {
     border-top: 5px solid transparent;
 }
 
+.profile::before {
+    top: -80px;
+}
+
 .menu__container-settings:hover .settings,
 .menu__container-settings:active .settings,
 .settings:hover{
+    transform: scaleX(1)
+}
+.menu__container-profile:hover .profile,
+.menu__container-profile:active .profile,
+.profile:hover{
     transform: scaleX(1)
 }
 
@@ -99,6 +152,11 @@ main {
         width: 50%;
         align-self: center;
     }
+
+    .welcome-message figure img{
+        width: 350px;
+    }
+
 }
 
 
